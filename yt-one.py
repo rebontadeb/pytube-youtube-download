@@ -17,7 +17,6 @@ if choice == "a":
         stream = video_obj.streams.filter(only_audio=True).first()
         try:
             out_file = stream.download(SAVE_PATH)
-            print(out_file)
             base, ext = os.path.splitext(out_file)
             new_file = base + ".mp3"
             os.rename(out_file, new_file)
