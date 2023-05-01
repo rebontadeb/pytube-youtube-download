@@ -1,10 +1,12 @@
-#!/Users/rebontadeb/opt/anaconda3/bin/python3
+!#/Users/rebontadeb/opt/anaconda3/bin/python3
+
 
 import sys,os
 from pytube import YouTube,Playlist
-SAVE_PATH='/yt-download/downloads'
+SAVE_PATH='/Users/rebontadeb/Documents/My_Docs.nosync/youtube_video/GO/hitesh'
 arg = sys.argv[1]
 playlist = Playlist(arg)
+os.makedirs(SAVE_PATH, exist_ok=True)
 
 
 print('Number of videos in playlist: %s' % len(playlist.video_urls))
